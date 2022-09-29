@@ -4,11 +4,7 @@ let myImage = document.querySelector('img');
 
 myImage.onclick = function() {
   let mySrc = myImage.getAttribute('src');
-  if(mySrc === 'images/firefox-icon.png') {
-    myImage.setAttribute ('src','images/firefox2.png');
-  } else {
-    myImage.setAttribute ('src','images/firefox-icon.png');
-  }
+  console.log("画像をクリックしました");
 }
 
 // Personalized welcome message code
@@ -22,7 +18,7 @@ function setUserName() {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.innerHTML = 'Mozilla is cool, ' + myName;
+    myHeading.innerHTML = '先週の復習です, ' + myName + 'さん';
   }
 }
 
@@ -30,7 +26,8 @@ if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
-  myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
+    myHeading.innerHTML = '先週の復習です, ' + myName + 'さん';
+
 }
 
 myButton.onclick = function() {
